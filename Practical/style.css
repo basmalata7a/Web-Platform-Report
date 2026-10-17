@@ -1,0 +1,509 @@
+/* =====================================
+   1. إعدادات عامة
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --secondary-color: #0f172a;
+    --background-color: #f8fafc;
+    --white-color: #ffffff;
+    --text-color: #334155;
+    --muted-color: #64748b;
+    --border-color: #e2e8f0;
+    --accent-color: #38bdf8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+
+/* =====================================
+   2. رأس الصفحة وشريط التنقل
+===================================== */
+
+.header {
+    background-color: var(--white-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    direction: ltr;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =====================================
+   3. القسم الرئيسي
+===================================== */
+
+.hero {
+    padding: 85px 0;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(56, 189, 248, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #eff6ff 100%
+        );
+    overflow: hidden;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--primary-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    color: var(--secondary-color);
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.description {
+    color: var(--muted-color);
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   4. بطاقة مثال CSS
+===================================== */
+
+.hero-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.09);
+    transform: rotate(-1deg);
+}
+
+.code-header {
+    display: flex;
+    gap: 7px;
+    padding: 17px 20px;
+    background-color: #f1f5f9;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.code-header span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #94a3b8;
+}
+
+.code-header span:first-child {
+    background-color: #ef4444;
+}
+
+.code-header span:nth-child(2) {
+    background-color: #f59e0b;
+}
+
+.code-header span:nth-child(3) {
+    background-color: #22c55e;
+}
+
+.code-content {
+    direction: ltr;
+    text-align: left;
+    padding: 25px;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    line-height: 2.2;
+    overflow-x: auto;
+}
+
+.code-purple {
+    color: #c4b5fd;
+}
+
+.code-blue {
+    color: #7dd3fc;
+}
+
+.code-green {
+    color: #86efac;
+}
+
+.code-orange {
+    color: #fdba74;
+}
+
+.preview {
+    margin: 22px;
+    padding: 25px;
+    text-align: center;
+    background-color: #eff6ff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+}
+
+.preview h3 {
+    color: var(--secondary-color);
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.preview p {
+    color: var(--muted-color);
+    font-size: 14px;
+}
+
+
+/* =====================================
+   5. عناوين الأقسام
+===================================== */
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2,
+.feature-content h2 {
+    color: var(--secondary-color);
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted-color);
+    font-size: 15px;
+}
+
+
+/* =====================================
+   6. بطاقات المعلومات
+===================================== */
+
+.about {
+    background-color: var(--white-color);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.info-card {
+    background-color: var(--white-color);
+    padding: 30px 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    border-color: #bfdbfe;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.08);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dbeafe;
+    color: var(--primary-color);
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    color: var(--secondary-color);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: var(--muted-color);
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =====================================
+   7. قسم المفاهيم الأساسية
+===================================== */
+
+.features {
+    background-color: #f8fafc;
+}
+
+
+/* =====================================
+   8. قسم التطبيق العملي
+===================================== */
+
+.application {
+    background-color: var(--white-color);
+}
+
+.feature-content {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+    gap: 60px;
+}
+
+.application-text {
+    padding: 25px;
+    background-color: #f8fafc;
+    border-right: 4px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.application-text p {
+    color: var(--text-color);
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.application-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================
+   9. نهاية الصفحة
+===================================== */
+
+.footer {
+    background-color: var(--secondary-color);
+    color: #cbd5e1;
+    padding: 28px 0;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+
+/* =====================================
+   10. التصميم المتجاوب
+===================================== */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-card {
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feature-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .navbar {
+        padding: 15px 0;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 25px 20px;
+    }
+
+    .code-content {
+        padding: 18px;
+        font-size: 12px;
+    }
+
+    .preview {
+        margin: 15px;
+        padding: 20px 12px;
+    }
+
+    .section-heading h2,
+    .feature-content h2 {
+        font-size: 25px;
+    }
+
+    .application-text {
+        padding: 20px;
+    }
+
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>تصميم صفحات الويب باستخدام CSS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- رأس الصفحة -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                Web<span>Design</span>
+            </a>
+
+            <nav>
+                <a href="#home">الرئيسية</a>
+                <a href="#about">مقدمة</a>
+                <a href="#concepts">المفاهيم الأساسية</a>
+                <a href="#application">التطبيق العملي</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- القسم الرئيسي -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <p class="tag">مشروع في تصميم صفحات الويب</p>
+
+                    <h1>
+                        تصميم صفحات الويب
+                        <span>باستخدام CSS</span>
+                    </h1>
+
+                    <p class="description">
+                        يتناول هذا المشروع دور CSS في تنسيق صفحات الويب،
+                        مع تطبيق عملي يوضح تأثير الألوان والخطوط والمسافات
+                        والتصميم المتجاوب على شكل الصفحة.
+                    </p>
+
+                    <a href="#about" class="btn">
+                        مقدمة عن الموضوع
+                    </a>
+
+                </div>
+
+                <!-- مثال توضيحي على خصائص CSS -->
+                <div class="hero-card">
+
+                    <div class="code-header">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="code-content">
+                        <p class="code-purple">.web-page {</p>
+
+                        <p>
+                            &nbsp;&nbsp;color:
+                            <span class="code-blue">#2563eb</span>;
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;font-size:
+                            <span class="code-orange">18px</span>;
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;padding:
+                            <span class="code-orange">20px</span>;
+                        </p>
+
+                        <p>
+                            &nbsp;&nbsp;background-color:
+                            <span class="code-green">white</span>;
+                        </p>
+
+                        <p class="code-purple">}</p>
+                    </div>
+
+                    <div class="preview">
+                        <h3>مثال على تنسيق عنصر</h3>
+                        <p>يتغير شكل العنصر عند تعديل خصائص CSS.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- مقدمة عن الموضوع -->
+        <section class="about section" id="about">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="tag">مقدمة</p>
+
+                    <h2>ما المقصود بتصميم صفحات الويب؟</h2>
+
+                    <p>
+                        يعتمد تصميم صفحات الويب على تنظيم المحتوى
+                        وتحديد طريقة عرضه للمستخدم. وتُستخدم HTML
+                        لبناء هيكل الصفحة، بينما تُستخدم CSS لتنسيق
+                        العناصر والتحكم في مظهرها.
+                    </p>
+
+                </div>
+
+                <div class="info-grid">
+
+                    <article class="info-card">
+
+                        <div class="card-icon">01</div>
+
+                        <h3>HTML</h3>
+
+                        <p>
+                            تُستخدم HTML لتحديد عناصر الصفحة،
+                            مثل العناوين والفقرات والصور والروابط.
+                        </p>
+
+                    </article>
+
+                    <article class="info-card">
+
+                        <div class="card-icon">02</div>
+
+                        <h3>CSS</h3>
+
+                        <p>
+                            تُستخدم CSS لتحديد الألوان والخطوط
+                            والخلفيات والمسافات وطريقة ترتيب العناصر.
+                        </p>
+
+                    </article>
+
+                    <article class="info-card">
+
+                        <div class="card-icon">03</div>
+
+                        <h3>التصميم المتجاوب</h3>
+
+                        <p>
+                            يساعد التصميم المتجاوب على تكييف تخطيط
+                            الصفحة مع عرض الشاشة المستخدمة.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- المفاهيم الأساسية -->
+        <section class="features section" id="concepts">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="tag">المفاهيم الأساسية</p>
+
+                    <h2>أهم خصائص CSS المستخدمة في التصميم</h2>
+
+                    <p>
+                        يمكن التحكم في مظهر عناصر الصفحة من خلال
+                        مجموعة من الخصائص التي تحدد طريقة عرض المحتوى.
+                    </p>
+
+                </div>
+
+                <div class="info-grid">
+
+                    <article class="info-card">
+
+                        <h3>الألوان والخلفيات</h3>
+
+                        <p>
+                            تحدد خصائص مثل color وbackground-color
+                            لون النص والخلفية.
+                        </p>
+
+                    </article>
+
+                    <article class="info-card">
+
+                        <h3>الخطوط والنصوص</h3>
+
+                        <p>
+                            تتحكم خصائص مثل font-size وfont-family
+                            في حجم الخط ونوعه.
+                        </p>
+
+                    </article>
+
+                    <article class="info-card">
+
+                        <h3>المسافات والتخطيط</h3>
+
+                        <p>
+                            تساعد خصائص مثل margin وpadding وdisplay
+                            في تنظيم العناصر وتحديد المسافات بينها.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- التطبيق العملي -->
+        <section class="application section" id="application">
+
+            <div class="container feature-content">
+
+                <div>
+                    <p class="tag">التطبيق العملي</p>
+
+                    <h2>اختبار تأثير خصائص CSS</h2>
+                </div>
+
+                <div class="application-text">
+
+                    <p>
+                       في هذا المشروع، أنشأنا صفحة ويب باستخدام HTML وCSS، وجرّبنا تغيير الألوان وأحجام الخطوط والمسافات لمعرفة تأثيرها على شكل الصفحة.
+
+كما اختبرنا تصميم الصفحة على أحجام مختلفة من الشاشات للتأكد من أن العناصر تظهر بصورة مناسبة على الكمبيوتر والموبايل.
+
+يوضح التطبيق كيف يمكن استخدام CSS للتحكم في مظهر صفحات الويب وتنظيم عناصرها.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- نهاية الصفحة -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                مشروع تطبيقي: تصميم صفحات الويب باستخدام HTML وCSS
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
